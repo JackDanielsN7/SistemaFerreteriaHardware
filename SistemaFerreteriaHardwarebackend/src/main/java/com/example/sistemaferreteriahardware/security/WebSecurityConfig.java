@@ -59,6 +59,7 @@ public class WebSecurityConfig {
                 .cors(org.springframework.security.config.Customizer.withDefaults())
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
+<<<<<<< HEAD
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/usuarios/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
@@ -72,6 +73,11 @@ public class WebSecurityConfig {
                         "/v3/api-docs/**"
                         ).permitAll()
 
+=======
+                        .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
+                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/actuator/health").permitAll()
+>>>>>>> 7ac37a8cdd4b1d0ef94aa0b882606376dd20ce8f
                         .requestMatchers("/api/roles/**", "/api/usuarios/**").hasRole("ADMIN")
                         .requestMatchers("/api/categorias/**", "/api/marcas/**", "/api/productos/**",
                                 "/api/clientes/**", "/api/inventario/**", "/api/movimientos/**",
