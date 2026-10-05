@@ -1,0 +1,28 @@
+# Entorno local
+.env
+mysql_data/
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Backend (Java / Maven)
+SistemaFerreteriaHardwarebackend/target/
+SistemaFerreteriaHardwarebackend/.idea/
+SistemaFerreteriaHardwarebackend/*.iml
+SistemaFerreteriaHardwarebackend/.classpath
+SistemaFerreteriaHardwarebackend/.project
+SistemaFerreteriaHardwarebackend/.settings/
+SistemaFerreteriaHardwarebackend/uploads/
+
+# Frontend (Angular / Node)
+frontendferreteria/node_modules/
+frontendferreteria/dist/
+frontendferreteria/.angular/
+frontendferreteria/coverage/
+
+# IDE
+.vscode/
+*.swp
+*.swo

@@ -1,0 +1,20 @@
+<div class="login-wrap">
+  <form class="login-card" (ngSubmit)="login()">
+    <p class="eyebrow">SistemaFerreteriaHardware</p>
+    <h1>Ferretería Hardware</h1>
+    <p class="lead">Inventario, ventas y clientes de componentes.</p>
+
+    <div *ngIf="serverChecking" class="note">Comprobando el servidor...</div>
+    <div *ngIf="!serverChecking && !serverOnline" class="note warn">El backend no responde en el puerto 8080.</div>
+    <div *ngIf="errorMessage" class="note error">{{ errorMessage }}</div>
+
+    <label>Usuario
+      <input name="usuario" [(ngModel)]="usuario" required autocomplete="username">
+    </label>
+    <label>Contraseña
+      <input name="password" type="password" [(ngModel)]="password" required autocomplete="current-password">
+    </label>
+    <button type="submit" [disabled]="!serverOnline">Entrar</button>
+    <p class="hint">admin / admin123 · vendedor / vendedor123</p>
+  </form>
+</div>
